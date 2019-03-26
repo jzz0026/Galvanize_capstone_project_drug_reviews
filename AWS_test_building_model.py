@@ -40,38 +40,41 @@ def rm_sym(df):
     df.loc[(df['rating'] > 4) & (df['rating'] < 7),'rating_cate'] = 'medium'
     return df
 
-df = pd.read_csv('drugsCom_raw/drugsComTrain_raw.tsv',sep='\t',index_col=0)
-df['date'] = pd.to_datetime(df['date'])
-df = rm_sym(df)
-df = df.sample(20000)
+def build_lr_subsample(n_sample):
+    df = pd.read_csv('drugsCom_raw/drugsComTrain_raw.tsv',sep='\t',index_col=0)
+    df['date'] = pd.to_datetime(df['date'])
+    df = rm_sym(df)
+    df = df.sample(n_sample)
 
-## Generate table of words with their counts
-con_vec = TfidfVectorizer(stop_words='english',tokenizer=tokenize)
-X_train = con_vec.fit_transform(df['review'])
-#target_3 = pd.get_dummies(df_tem['rating_cate'])
-X_train = pd.DataFrame(X_train.toarray(),columns=con_vec.get_feature_names())
-y_train = df['rating_cate']
+    ## Generate table of words with their counts
+    con_vec = TfidfVectorizer(stop_words='english',tokenizer=tokenize)
+    X_train = con_vec.fit_transform(df['review'])
+    #target_3 = pd.get_dummies(df_tem['rating_cate'])
+    X_train = pd.DataFrame(X_train.toarray(),columns=con_vec.get_feature_names())
+    y_train = df['rating_cate']
 
 
-test = pd.read_csv("drugsCom_raw/drugsComTest_raw.tsv",sep='\t', index_col=0)
-test = rm_sym(test)
-X_test = con_vec.transform(test['review'])
-X_test = pd.DataFrame(X_test.toarray(),columns=con_vec.get_feature_names())
-y_test = test['rating_cate']
+    test = pd.read_csv("drugsCom_raw/drugsComTest_raw.tsv",sep='\t', index_col=0)
+    test = rm_sym(test)
+    X_test = con_vec.transform(test['review'])
+    X_test = pd.DataFrame(X_test.toarray(),columns=con_vec.get_feature_names())
+    y_test = test['rating_cate']
 
-## Buiding model
-lr = LogisticRegression(penalty='l1',multi_class='auto',solver='saga',n_jobs=-1)
-lr.fit(X_train,y_train)
+    ## Buiding model
+    lr = LogisticRegression(penalty='l1',multi_class='auto',solver='saga',n_jobs=-1)
+    lr.fit(X_train,y_train)
 
-y_test_predict = lr.predict(X_test)
+    y_test_predict = lr.predict(X_test)
 
-accu_score = accuracy_score(y_test,y_test_predict)
+    accu_score = accuracy_score(y_test,y_test_predict)
 
-with open("accuracy_score_test.txt", 'w') as outfile:
-    outfile.write(str(accu_score))
-    
-# save the model to disk
+    with open(str(n_sample) + "_accuracy_score_test.txt", 'w') as outfile:
+        outfile.write(str(accu_score))
+        
+    # save the model to disk
 
-pickle.dump(con_vec, open("1st_tfidf.sav", 'wb'))
-pickle.dump(lr, open("1st_lr.sav", 'wb'))
+    pickle.dump(con_vec, open(str(n_sample)+"_tfidf.sav", 'wb'))
+    pickle.dump(lr, open(str(n_sample)+"_lr.sav", 'wb'))
+
+build_lr_subsample(1000)
 
