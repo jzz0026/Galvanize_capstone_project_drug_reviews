@@ -76,6 +76,6 @@ def build_lr_subsample(n_sample):
     pickle.dump(con_vec, open(str(n_sample)+"_tfidf.sav", 'wb'))
     pickle.dump(lr, open(str(n_sample)+"_lr.sav", 'wb'))
 
-for i in [1000,5000,10000,20000,40000,50000]:
-    build_lr_subsample(1000)
+for i in [5000,10000,20000,40000,50000]:
+    build_lr_subsample(i)
 
