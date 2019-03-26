@@ -1,0 +1,34 @@
+/home/ubuntu/anaconda3/lib/python3.6/site-packages/sklearn/feature_extraction/text.py:301: UserWarning: Your stop_words may be inconsistent with your preprocessing. Tokenizing the stop words generated tokens ['abov', 'afterward', 'alon', 'alreadi', 'alway', 'ani', 'anoth', 'anyon', 'anyth', 'anywher', 'becam', 'becaus', 'becom', 'befor', 'besid', 'cri', 'describ', 'dure', 'els', 'elsewher', 'empti', 'everi', 'everyon', 'everyth', 'everywher', 'fifti', 'forti', 'henc', 'hereaft', 'herebi', 'howev', 'hundr', 'inde', 'mani', 'meanwhil', 'moreov', 'nobodi', 'noon', 'noth', 'nowher', 'onc', 'onli', 'otherwis', 'ourselv', 'perhap', 'pleas', 'sever', 'sinc', 'sincer', 'sixti', 'someon', 'someth', 'sometim', 'somewher', 'themselv', 'thenc', 'thereaft', 'therebi', 'therefor', 'togeth', 'twelv', 'twenti', 'veri', 'whatev', 'whenc', 'whenev', 'wherea', 'whereaft', 'wherebi', 'wherev', 'whi', 'yourselv'] not in stop_words.
+  'stop_words.' % sorted(inconsistent))
+Traceback (most recent call last):
+  File "AWS_test_building_model.py", line 50, in <module>
+    X_train = con_vec.fit_transform(df['review'])
+  File "/home/ubuntu/anaconda3/lib/python3.6/site-packages/sklearn/feature_extraction/text.py", line 1613, in fit_transform
+    X = super(TfidfVectorizer, self).fit_transform(raw_documents)
+  File "/home/ubuntu/anaconda3/lib/python3.6/site-packages/sklearn/feature_extraction/text.py", line 1031, in fit_transform
+    self.fixed_vocabulary_)
+  File "/home/ubuntu/anaconda3/lib/python3.6/site-packages/sklearn/feature_extraction/text.py", line 943, in _count_vocab
+    for feature in analyze(doc):
+  File "/home/ubuntu/anaconda3/lib/python3.6/site-packages/sklearn/feature_extraction/text.py", line 329, in <lambda>
+    tokenize(preprocess(self.decode(doc))), stop_words)
+  File "AWS_test_building_model.py", line 29, in tokenize
+    tokens = nltk.word_tokenize(text)
+  File "/home/ubuntu/anaconda3/lib/python3.6/site-packages/nltk/tokenize/__init__.py", line 128, in word_tokenize
+    sentences = [text] if preserve_line else sent_tokenize(text, language)
+  File "/home/ubuntu/anaconda3/lib/python3.6/site-packages/nltk/tokenize/__init__.py", line 95, in sent_tokenize
+    return tokenizer.tokenize(text)
+  File "/home/ubuntu/anaconda3/lib/python3.6/site-packages/nltk/tokenize/punkt.py", line 1241, in tokenize
+    return list(self.sentences_from_text(text, realign_boundaries))
+  File "/home/ubuntu/anaconda3/lib/python3.6/site-packages/nltk/tokenize/punkt.py", line 1291, in sentences_from_text
+    return [text[s:e] for s, e in self.span_tokenize(text, realign_boundaries)]
+  File "/home/ubuntu/anaconda3/lib/python3.6/site-packages/nltk/tokenize/punkt.py", line 1291, in <listcomp>
+    return [text[s:e] for s, e in self.span_tokenize(text, realign_boundaries)]
+  File "/home/ubuntu/anaconda3/lib/python3.6/site-packages/nltk/tokenize/punkt.py", line 1281, in span_tokenize
+    for sl in slices:
+  File "/home/ubuntu/anaconda3/lib/python3.6/site-packages/nltk/tokenize/punkt.py", line 1322, in _realign_boundaries
+    for sl1, sl2 in _pair_iter(slices):
+  File "/home/ubuntu/anaconda3/lib/python3.6/site-packages/nltk/tokenize/punkt.py", line 313, in _pair_iter
+    prev = next(it)
+  File "/home/ubuntu/anaconda3/lib/python3.6/site-packages/nltk/tokenize/punkt.py", line 1295, in _slices_from_text
+    for match in self._lang_vars.period_context_re().finditer(text):
+KeyboardInterrupt

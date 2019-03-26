@@ -43,8 +43,7 @@ def rm_sym(df):
 df = pd.read_csv('drugsCom_raw/drugsComTrain_raw.tsv',sep='\t',index_col=0)
 df['date'] = pd.to_datetime(df['date'])
 df = rm_sym(df)
-
-df = df.samplee(100)
+df = df.sample(20000)
 
 ## Generate table of words with their counts
 con_vec = TfidfVectorizer(stop_words='english',tokenizer=tokenize)
@@ -61,7 +60,7 @@ X_test = pd.DataFrame(X_test.toarray(),columns=con_vec.get_feature_names())
 y_test = test['rating_cate']
 
 ## Buiding model
-lr = LogisticRegression(penalty='l1',multi_class='auto',solver='saga')
+lr = LogisticRegression(penalty='l1',multi_class='auto',solver='saga',n_jobs=-1)
 lr.fit(X_train,y_train)
 
 y_test_predict = lr.predict(X_test)
