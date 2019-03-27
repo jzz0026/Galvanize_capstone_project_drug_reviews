@@ -57,5 +57,5 @@ pickle.dump(con_vec, open("gbc_20000_600_tfidf.sav", 'wb'))
 
 gbc = GradientBoostingClassifier(n_estimators=600)
 gbc.fit(X_train,y_train)
-pickle.dump(gbc, open("gbc_20000_600_tfidf.sav", 'wb'))
+pickle.dump(gbc, open("gbc_20000_600_gbc.sav", 'wb'))
 
