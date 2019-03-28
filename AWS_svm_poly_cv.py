@@ -1,9 +1,7 @@
-
-# coding: utf-8
-
 import pandas as pd
 import numpy as np
 import nltk
+import matplotlib.pyplot as plt
 from nltk.tokenize import word_tokenize
 import string
 from nltk.stem.snowball import SnowballStemmer
@@ -14,6 +12,8 @@ from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
 from wordcloud import WordCloud
 from sklearn.metrics import accuracy_score 
 import pickle
+from sklearn.svm import SVC
+
 
 ## only need to remove punctuation and stemize
 stemmer = SnowballStemmer('english')
@@ -44,35 +44,29 @@ df = pd.read_csv('drugsCom_raw/drugsComTrain_raw.tsv',sep='\t',index_col=0)
 df['date'] = pd.to_datetime(df['date'])
 df = rm_sym(df)
 
-df = df.samplee(100)
 
-## Generate table of words with their counts
-con_vec = TfidfVectorizer(stop_words='english',tokenizer=tokenize)
-X_train = con_vec.fit_transform(df['review'])
-#target_3 = pd.get_dummies(df_tem['rating_cate'])
-X_train = pd.DataFrame(X_train.toarray(),columns=con_vec.get_feature_names())
-y_train = df['rating_cate']
+def add_sample_svm(n):
+    df_tem2 = df.sample(n)
+    #df_tem2.groupby('rating_cate').size() / df_tem2.groupby('rating_cate').size().sum()
+
+    ## Generate table of words with their counts
+    con_vec = TfidfVectorizer(stop_words='english',tokenizer=tokenize)
+    X_train = con_vec.fit_transform(df_tem2['review'])
+    y_train = df_tem2['rating_cate']
+
+    ## test set
+#     test = pd.read_csv("drugsCom_raw/drugsComTest_raw.tsv",sep='\t', index_col=0)
+#     test = rm_sym(test)
+#     X_test = con_vec.transform(test['review'])
+#     y_test = test['rating_cate']
 
 
-test = pd.read_csv("drugsCom_raw/drugsComTest_raw.tsv",sep='\t', index_col=0)
-test = rm_sym(test)
-X_test = con_vec.transform(test['review'])
-X_test = pd.DataFrame(X_test.toarray(),columns=con_vec.get_feature_names())
-y_test = test['rating_cate']
+    #pickle.dump(con_vec, open("svm_lin_20000_tfidf.sav", 'wb'))
 
-## Buiding model
-lr = LogisticRegression(penalty='l1',multi_class='auto',solver='saga')
-lr.fit(X_train,y_train)
-
-y_test_predict = lr.predict(X_test)
-
-accu_score = accuracy_score(y_test,y_test_predict)
-
-with open("accuracy_score_test.txt", 'w') as outfile:
-    outfile.write(str(accu_score))
-    
-# save the model to disk
-
-pickle.dump(con_vec, open("1st_tfidf.sav", 'wb'))
-pickle.dump(lr, open("1st_lr.sav", 'wb'))
-
+    svm_rbf = SVC(kernel='rbf')
+    svm_rbf_cv_score = cross_val_score(svm_rbf,X_train,y_train,scoring='accuracy',cv=3,n_jobs=-1)
+    with open("svm_rbf_"+str(n)+"_cv.txt", 'w') as outfile:
+        outfile.write(str(svm_rbf_cv_score))
+        
+for n in [5000,10000,20000,40000,80000]:
+    add_sample_svm(n)
