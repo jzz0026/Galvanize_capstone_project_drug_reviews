@@ -1,0 +1,145 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+#import seaborn as sns
+#from statsmodels.stats.proportion import proportions_chisquare
+#from scipy.stats import chisquare
+import pickle
+#from bs4 import BeautifulSoup
+from collections import defaultdict
+#import requests
+%matplotlib inline
+from sklearn.svm import SVC
+from nltk.stem.snowball import SnowballStemmer
+
+## remove special symbol
+def rm_sym(df):
+    df['review'] = df['review'].str.replace("&#039;",'\'')
+    df['review'].head()
+    df['rating_cate'] = ''
+    df.loc[df['rating'] >= 7,'rating_cate'] = 'high'
+    df.loc[df['rating'] <= 4,'rating_cate'] = 'low'
+    df.loc[(df['rating'] > 4) & (df['rating'] < 7),'rating_cate'] = 'medium'
+    return df
+
+def clean_text(df_tem3):
+    df_tem3['review'] = df_tem3['review'].str.replace("\"","").str.lower()
+    df_tem3['review'] = df_tem3['review'].str.replace( r"(\\r)|(\\n)|(\\t)|(\\f)|(\.)|(\;)|(\:)|(\!)|(\')|(\?)|(\,)|(\")|(\()|(\))|(\[)|(\])|(&#039;)|(\d\s)|(\d)|(\/)","")
+    df_tem3['review'] = df_tem3['review'].str.replace("\"","").str.lower()
+    df_tem3['review'] = df_tem3['review'].str.replace( r"(\$)|(\-)|(\\)|(\s{2,})"," ")
+    df_tem3['review'].sample(1).iloc[0]
+
+    stemmer = SnowballStemmer('english')
+    df_tem3['review'] = df_tem3['review'].apply(lambda x: ' '.join([stemmer.stem(word) for word in x.split(" ")]))
+    return df_tem3
+
+df = pd.read_csv('drugsCom_raw/drugsComTrain_raw.tsv',sep='\t',index_col=0)
+df = rm_sym(df)
+df_tem3 = df
+
+test = pd.read_csv("drugsCom_raw/drugsComTest_raw.tsv",sep='\t', index_col=0)
+test = rm_sym(test)
+
+df_tem3 = clean_text(df_tem3)
+test = clean_text(test)
+
+
+import tensorflow as tf
+import tensorflow 
+
+#from tensorflow import tensorflow.keras
+
+from keras.datasets import imdb
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.layers import LSTM
+from keras.layers.embeddings import Embedding
+from keras.preprocessing import sequence
+from keras.preprocessing.text import Tokenizer
+
+# fix random seed for reproducibility
+
+MAX_NB_WORDS = 3000
+max_review_length = 500
+
+
+# Tokenize the data
+tokenizer = Tokenizer(num_words = MAX_NB_WORDS, 
+                      filters='!"#$%&()*+,-./:;<=>?@[\]^_`{|}~',
+                      lower=True, split=' ', char_level=False, 
+                      oov_token=None, document_count=0)
+
+tokenizer.fit_on_texts(df_tem3['review'])
+train_sequences = tokenizer.texts_to_sequences(df_tem3['review'])
+test_sequences = tokenizer.texts_to_sequences(test['review'])
+
+
+# truncate and pad input sequences
+X_train = sequence.pad_sequences(train_sequences, maxlen=max_review_length)
+X_test = sequence.pad_sequences(test_sequences, maxlen = max_review_length)
+
+
+y_train = df_tem3['rating_cate']
+y_test = test['rating_cate']
+
+
+# Print shapes of data. 
+
+print(X_train.shape, '<-- shape of train_data ready for val/train split.')
+print(X_test.shape, '<-- shape of final_test_data ready for fedding to network.')
+print(len(tokenizer.word_index), '<-- Length of Word Index')
+
+
+# Split Training & Validation Data
+from sklearn.model_selection import train_test_split
+
+
+print('creating train and validation data by dividing train_data in 80:20 ratio')
+######################################################
+
+X_train_t, X_train_val, Y_test_t, y_test_val = train_test_split(X_train, y_train,test_size = 0.2)
+
+######################################################
+print('train data shape:', X_train_t.shape)
+print('validation data shape:', X_train_val.shape)
+print('Data is ready for training!!')
+
+
+nb_words  = min(MAX_NB_WORDS, len(word_index))
+lstm_out = max_review_length
+
+model = Sequential()
+model.add(Embedding(nb_words,EMBEDDING_DIM,input_length=max_review_length))
+model.add(LSTM(50))
+#model.add(Attention(MAX_SEQUENCE_LENGTH))
+model.add(Dense(3, activation = 'softmax'))
+model.compile(loss='binary_crossentropy',optimizer='adam',metrics=['accuracy'])
+model.summary()
+
+
+from tensorflow.keras.callbacks import EarlyStopping, ModelCheckpoint
+
+
+training_cycle = 1
+batch = 32 
+notebookname = "Drug_Data_"
+variant = "LSTM_w_stopwords_"
+version = "1.0_"
+title = notebookname + variant + version
+
+
+stamp = '{}trainging_cycle{}batchsize_{}'.format(title,training_cycle,batch)
+print(stamp)
+best_model_path = title + stamp + 'best.h5'
+
+early_stopping = EarlyStopping(patience = 4)
+model_checkpoint = ModelCheckpoint(best_model_path, save_best_only = True)
+
+
+# Run LSTM Model
+epoch = 40
+LSTM_model = model.fit(X_train_t, Y_train_t, batch_size=batch, epochs=epoch,
+                       validation_data=(X_train_val, y_train_val), shuffle = True, 
+                       callbacks = [early_stopping, model_checkpoint], verbose = 0)
+best_score = min(LSTM_model.history['val_loss'])
+
