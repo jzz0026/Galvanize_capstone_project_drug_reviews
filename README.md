@@ -42,4 +42,10 @@
    |Insomnia|53.858426|1.252668e-07|1.265978e-06|
    |Bronchitis|50.674949|4.731868e-07|4.250795e-06|
    |Vaginal Yeast Infection|48.344293|1.239355e-06|1.002018e-05|
+   
+- The figure below showed the frequencies of top 10 conditions with lowest adjusted p-values among 12 months, indicating obvious seasonalities.
+<p align="center">
+   <img src="Plot/Top_condition_signif_month.png" alt="alternate text">
+</p>
+
 
