@@ -25,8 +25,8 @@
    <img src="Plot/Per_comments_month.png" alt="alternate text">
 </p>
 - Chi-squared test was used to determine whether there is a significant difference between the expected frequency and the observed frequencies. The expected frequency here was assumed to be the frequency of all conditions/diseases among 12 months and the observed frequency of each condition was then compared to it. The resulting p-value was adjusted using fdr correction.
-H0: The frequency of the condition/disease in 12 months have no difference with that the expected frequency.
-H1: The frequency of the condition/disease in 12 months have difference with that the expected frequency.
+<br/>H0: The frequency of the condition/disease in 12 months have no difference with that the expected frequency.
+<br/>H1: The frequency of the condition/disease in 12 months have difference with that the expected frequency.
 
 |Condition|Statistic|P-value|adjusted P-value|
 |---|---|---|---|
