@@ -10,11 +10,11 @@
 - Explore side effects from patients’ comments.
 
 ## EDA
-
+- The number of comments posted had a trend of increasing with time seires. The website probably became more popular after 2015. 
 <p align="center">
    <img src="Plot/num_comments_date.png" alt="alternate text">
 </p>
-
+- 
 
 
 
