@@ -28,7 +28,7 @@
 H0: The frequency of the condition/disease in 12 months have no difference with that the expected frequency.
 H1: The frequency of the condition/disease in 12 months have difference with that the expected frequency.
 
-|condition|statistic|pvalue|adj_pvalue|
+|Condition|Statistic|P-value|adjusted P-value|
 |---|---|---|---|
 |Weight Loss|145.652500|1.149992e-25|9.297688e-24|
 |Cough|129.962039|1.771886e-22|7.162849e-21|
