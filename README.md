@@ -29,16 +29,16 @@
 <br/>H0: The frequency of the condition/disease in 12 months have no difference with that the expected frequency.
 <br/>H1: The frequency of the condition/disease in 12 months have difference with that the expected frequency.
 
-|Condition|Statistic|P-value|adjusted P-value|
-|---|---|---|---|
-|Weight Loss|145.652500|1.149992e-25|9.297688e-24|
-|Cough|129.962039|1.771886e-22|7.162849e-21|
-|Allergic Rhinitis|89.940100|1.712822e-14|4.616054e-13|
-|Sinusitis|72.581047|3.936670e-11|7.956994e-10|
-|Cough and Nasal Congestion|71.094673|7.562344e-11|1.222831e-09|
-|Herpes Simplex|57.745517|2.424612e-08|3.267165e-07|
-|Obesity|54.759136|8.577515e-08|9.907030e-07|
-|Insomnia|53.858426|1.252668e-07|1.265978e-06|
-|Bronchitis|50.674949|4.731868e-07|4.250795e-06|
-|Vaginal Yeast Infection|48.344293|1.239355e-06|1.002018e-05|
+   |Condition|Statistic|P-value|adjusted P-value|
+   |---|---|---|---|
+   |Weight Loss|145.652500|1.149992e-25|9.297688e-24|
+   |Cough|129.962039|1.771886e-22|7.162849e-21|
+   |Allergic Rhinitis|89.940100|1.712822e-14|4.616054e-13|
+   |Sinusitis|72.581047|3.936670e-11|7.956994e-10|
+   |Cough and Nasal Congestion|71.094673|7.562344e-11|1.222831e-09|
+   |Herpes Simplex|57.745517|2.424612e-08|3.267165e-07|
+   |Obesity|54.759136|8.577515e-08|9.907030e-07|
+   |Insomnia|53.858426|1.252668e-07|1.265978e-06|
+   |Bronchitis|50.674949|4.731868e-07|4.250795e-06|
+   |Vaginal Yeast Infection|48.344293|1.239355e-06|1.002018e-05|
 
