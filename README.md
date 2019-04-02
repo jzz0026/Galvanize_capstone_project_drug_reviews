@@ -9,6 +9,12 @@
 - Train the model to predict sentiment of reviews as “Positive”, “Negative”, and “Neutral” based on vectorized words from patients’ comments.
 - Explore side effects from patients’ comments.
 
+## EDA
+
+<p align="center">
+   <img src="Plot/num_comments_date.png" alt="alternate text">
+</p>
+
 
 
 
