@@ -18,6 +18,7 @@
 <p align="center">
    <img src="Plot/num_comments_each_condition.png" alt="alternate text">
 </p>
+
 ## Find conditions/diseases with significantly seasonal variations
 - The figour below showed the percentage of comments for the top 50 conditions with the most comments among 12 months. Several of them obviously presented some preference on distinct months, such as weight Loss and cough.	
 <p align="center">
