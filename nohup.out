@@ -40,3 +40,19 @@ KeyboardInterrupt
   'stop_words.' % sorted(inconsistent))
 /home/ubuntu/anaconda3/lib/python3.6/site-packages/sklearn/feature_extraction/text.py:301: UserWarning: Your stop_words may be inconsistent with your preprocessing. Tokenizing the stop words generated tokens ['abov', 'afterward', 'alon', 'alreadi', 'alway', 'ani', 'anoth', 'anyon', 'anyth', 'anywher', 'becam', 'becaus', 'becom', 'befor', 'besid', 'cri', 'describ', 'dure', 'els', 'elsewher', 'empti', 'everi', 'everyon', 'everyth', 'everywher', 'fifti', 'forti', 'henc', 'hereaft', 'herebi', 'howev', 'hundr', 'inde', 'mani', 'meanwhil', 'moreov', 'nobodi', 'noon', 'noth', 'nowher', 'onc', 'onli', 'otherwis', 'ourselv', 'perhap', 'pleas', 'sever', 'sinc', 'sincer', 'sixti', 'someon', 'someth', 'sometim', 'somewher', 'themselv', 'thenc', 'thereaft', 'therebi', 'therefor', 'togeth', 'twelv', 'twenti', 'veri', 'whatev', 'whenc', 'whenev', 'wherea', 'whereaft', 'wherebi', 'wherev', 'whi', 'yourselv'] not in stop_words.
   'stop_words.' % sorted(inconsistent))
+[I 22:26:41.088 NotebookApp] Using EnvironmentKernelSpecManager...
+[I 22:26:41.088 NotebookApp] Started periodic updates of the kernel list (every 3 minutes).
+[W 22:26:41.228 NotebookApp] All authentication is disabled.  Anyone who can connect to this server will be able to run code.
+[I 22:26:41.241 NotebookApp] Loading IPython parallel extension
+[I 22:26:41.261 NotebookApp] JupyterLab beta preview extension loaded from /home/ubuntu/anaconda3/lib/python3.6/site-packages/jupyterlab
+[I 22:26:41.261 NotebookApp] JupyterLab application directory is /home/ubuntu/anaconda3/share/jupyter/lab
+[I 22:26:41.387 NotebookApp] [nb_conda] enabled
+[I 22:26:41.388 NotebookApp] Serving notebooks from local directory: /home/ubuntu/Galvanize_capstone_project_drug_reviews
+[I 22:26:41.388 NotebookApp] 0 active kernels
+[I 22:26:41.388 NotebookApp] The Jupyter Notebook is running at:
+[I 22:26:41.388 NotebookApp] http://localhost:48889/
+[I 22:26:41.388 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[I 22:26:41.389 NotebookApp] Starting initial scan of virtual environments...
+[I 22:26:42.998 NotebookApp] Found new kernels in environments: conda_theano_p36, conda_theano_p27, conda_caffe_p35, conda_caffe2_p27, conda_cntk_p36, conda_amazonei_mxnet_p27, conda_tensorflow_p27, conda_python2, conda_chainer_p27, conda_mxnet_p36, conda_python3, conda_pytorch_p27, conda_amazonei_tensorflow_p27, conda_caffe_p27, conda_mxnet_p27, conda_cntk_p27, conda_amazonei_mxnet_p36, conda_pytorch_p36, conda_chainer_p36, conda_tensorflow_p36, conda_amazonei_tensorflow_p36, conda_anaconda3
+[C 01:37:02.885 NotebookApp] received signal 15, stopping
+[I 01:37:04.486 NotebookApp] Shutting down 0 kernels
