@@ -70,13 +70,15 @@
 Top words in the linear SVM appeared to be related to description of some discomfort (e.g. "nausea", "dry", "diarrhea", "heartburn") dizzi"). However, these words could be ambiguous and included both symptoms and side effects, probably disturbing classification and resulting in a relatively lower performance. LSTM, as a special kind of RNN, is able to maintain some "memories" for forward/backworad words and likely to better "understand" the whole sentence. 
 <br />
 
-- The built models were also used to predit the other dataset with no label of side effects (used in the last section). 
+- Comments of benefits, side effects and others were separated in this data set, which could be distinct to usual comments online. Despite three types of comments were incorporated for training, I still believe it should be neccesary to use the models to predit the other dataset with no label of side effects (used in the last section) in order to test the models in the real world. The accuracies were estimated by artificial reading 10 randomly sample records. Obviously, the LSTM model helped to identity more ture negative (no side effects) than random selection despite of similar performance on true postive. If adding more comments with labled of side effects in the future, it is very possible to achieve a better model.
 
    |model|TP|TN|
    |---|---|---|
    |LSTM|6.5|7.5|
    |SVM|5.5|6|
    |Random|6|3|
+   
+   Some comments predicted by LSTM
    
    |LSTM| Predited to have side effect | Predited to have no side effect|
    |---|---|---|
