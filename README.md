@@ -61,6 +61,7 @@
    <img src="Plot/ROC_curve.png" alt="alternate text">
 </p>
 
-   --             |  Solarized Ocean
-:-------------------------:|:-------------------------:
-![](Plot/ROC_curve.png)  |  xxx
+   ROC curve             |  ---------   |
+:-----------------------:|:-------------------------:
+![](Plot/ROC_curve.png)  |  Logistic regresssion
+                         |   SVM
