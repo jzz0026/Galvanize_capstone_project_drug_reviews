@@ -77,3 +77,13 @@ Top words in the linear SVM appeared to be related to description of some discom
    |LSTM|6.5|7.5|
    |SVM|5.5|6|
    |Random|6|3|
+   
+   |LSTM| Predited to have side effect | Predited to have no side effect|
+   |---|---|---|
+   |1|-|my hemorroid are gone thank you|
+   |2|-|i just start the pill in the morn and one pill at night today i have had no effect whatsoev other than feel tire i have lost no weight and am hungri all the time i will continu it but not for much longer veri disappoint|
+   |3|-|wonder veri quick act like two hour so watch out for that solv the problem when all els fail expens
+|
+   |4|-|i have been suffer with cold sore my whole life noth i tri everyth work like this i was veri skeptic about purchas it becaus it is expens for the littl tube i am so glad i did if you put it on as soon as you notic or feel oneven come it will stop it from grow ani bigger or make it disappear complet|
+   |5|-|i have use imitrex by autoinject sinc it first came out after year of migrain take my day away this tini inject allow me to take it back unlik the other medicin i take this at first onset and  min later continu my day on schedul no nap no regret no nausea after initi prescript met with the manufactur rep who help with dose i was pioneer ani new product when this came out wegman pharmacist and my md and the drug rep were great help now shot in each leg right away im lbs|
+   
