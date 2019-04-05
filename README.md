@@ -60,5 +60,5 @@
 
 
 |   ROC curve             |  Model   | Accuracy | ROC-AUC|
-|:-----------------------:|:-------------------------:|:-------------------------:|
+|:-----------------------:|:-------------------------:|:-------------------------:|-------------------------:|
 |![](Plot/ROC_curve.png)  |  Logistic regresssion<br />SVM linear<br />SVM rbf<br />Random forest <br /> Gradient boosting<br /> LSTM|0.73<br />0.75<br />0.68<br />0.71<br />0.72|
