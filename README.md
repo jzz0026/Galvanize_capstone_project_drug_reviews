@@ -56,3 +56,11 @@
 </p>
 
 - tf-idf vecterization with Logistic regresssion, SVM, Random forest and Gradient boosting as well as embeding plus LSTM were applied to train data. LSTM here gave a highest performance about 84.3% accuracy, 9% higher than the seconde one, SVM with linear kernel (75.4%).
+
+<p align="center">
+   <img src="Plot/ROC_curve.png" alt="alternate text">
+</p>
+
+   --             |  Solarized Ocean
+:-------------------------:|:-------------------------:
+![](Plot/ROC_curve.png)  |  xxx
