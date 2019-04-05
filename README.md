@@ -65,5 +65,5 @@
 
 - Despite of the best performance, the model trained using LSTM is always hard to interpret. So we also looked into the second best model built by SVM using linear kernel. The figure below showed words with the top highest and lowest coefficients in the linear SVM model, which contributed to maximizing the margin and determining the boundary of two classes.
 <p align="center">
-   <img src="Plot/top_features_lin_svm.png" alt="alternate text" width="300"> 
+   <img src="Plot/top_features_lin_svm.png" alt="alternate text"> 
 </p>
