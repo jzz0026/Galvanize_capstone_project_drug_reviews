@@ -47,9 +47,12 @@
 <p align="center">
    <img src="Plot/Top_condition_signif_month.png" alt="alternate text">
 </p>
+## Modeling for sentiment analysis of drug reviews
+- The 215,063 patients' comments were provided together with rating ranging from 0 to 10. Here, I assigned the rating into three categories “Positive” (<= 4), “Negative” (>=7), and “Neutral” (>4 and <7) in order to avoild bias from personal influence. The words in comments were vectorized using tf-idf. 
 
 
-## Identify comments with side effects
+
+## Modeling for identification of comments with side effects
 - It will also be very suggestive to drug pharmacy companies if I can build a model to filtering comments and quickly selecting patients' complains about side effects. However, the dataset used above didn't really contained the label of "with/without side effects". So web scraping is applied to extract comments and this type of labe from druglib.com, leading to total 4160 records. 
 <p align="center">
    <img src="Plot/webscrap_exam.png" alt="alternate text" width="300"> <img src="http://www.druglib.com/img/dl2/logo.gif" alt="alternate text">
