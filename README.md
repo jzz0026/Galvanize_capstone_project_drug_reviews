@@ -62,3 +62,8 @@
 |   ROC curve             |  Model   | Accuracy | ROC-AUC|
 |:-----------------------:|:-------------------------:|:-------------------------:|-------------------------:|
 |![](Plot/ROC_curve.png)  |  Logistic regresssion<br />SVM linear<br />SVM rbf<br />Random forest <br /> Gradient boosting<br /> LSTM|0.73<br />0.75<br />0.68<br />0.71<br />0.72 <br />0.86|0.78 <br /> - <br /> - <br /> 0.79 <br /> 0.77 <br /> 0.84|
+
+- Despite of the best performance, the model trained using LSTM is always hard to interpret. So we also looked into the second best model built by SVM using linear kernel. The figure below showed words with the top highest and lowest coefficients in the linear SVM model, which contributed to maximizing the margin and determining the boundary of two classes.
+<p align="center">
+   <img src="top_features_lin_svm.png" alt="alternate text" width="300"> 
+</p>
