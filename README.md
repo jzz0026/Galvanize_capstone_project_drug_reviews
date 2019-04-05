@@ -59,6 +59,6 @@
 
 
 
-   ROC curve             |  ---------   |
-:-----------------------:|:-------------------------:
-![](Plot/ROC_curve.png)  |  Logistic regresssion<br />SVM<br />Random forest <br /> Gradient boosting
+|   ROC curve             |  ---------   |
+|:-----------------------:|:-------------------------:
+|![](Plot/ROC_curve.png)  |  Logistic regresssion<br />SVM<br />Random forest <br /> Gradient boosting
