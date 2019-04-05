@@ -67,3 +67,4 @@
 <p align="center">
    <img src="Plot/top_features_lin_svm.png" alt="alternate text"> 
 </p>
+Top words in the linear SVM appeared to be related to description of some discomfort (e.g. "nausea", "dry", "diarrhea", "heartburn") dizzi"). However, these words could be ambiguous and included both symptoms and side effects, probably disturbing classification and resulting in a relatively lower performance. LSTM, as a special kind of RNN, is able to maintain some "memories" for forward/backworad words and likely to build a better classifier. 
