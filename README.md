@@ -52,15 +52,13 @@
 - The 215,063 patients' comments were provided together with rating ranging from 0 to 10. Here, I assigned the rating into three categories “Positive” (<= 4), “Negative” (>=7), and “Neutral” (>4 and <7) in order to avoild bias from personal influence. The words in comments were cleaned, stemmized and vectorized using tf-idf. 
 - The dataset was then trained using Logistic regresssion, SVM, Random forest and Gradient boosting as well as embeding plus LSTM. The resulting confusion matrixes were listed below.
 
+   |model|Random forest|LSTM|Logistic regresssion|SVM linear kernel|Gradient boosting|Baseline(choose the most frequent class)|
+   |---|---|---|---|---|---|---|
+   |Accuracy|0.88|0.83|0.78|0.78|0.74|0.65|
+
 <p align="center">
    <img src="Plot/Confusion_matrix_sentiment.png" alt="alternate text">
 </p>
-
-   |model|Random forest|LSTM|Logistic regresssion|SVM linear kernel|Gradient boosting|Base line|
-   |---|---|---|---|---|---|---|
-   |accuracy|0.88|0.83|0.78|0.78|0.74|-|
-   
-
    
 Intresetingly, Random forest gave a the highest accuracy (0.88) comparing to all other algorithms, even LSTM. Even more impressive, it gave a 99% accuracy rate on positive sentiment. LSTM is capable of remembering information for long periods of time, but it only achieved a higher accuracy rate on positive sentiment rather than rest of two. The indpendant words probably contained enough imformation for a good classifier. However, if keeping do more tuning for LSTM, it's still very likely to get a model with higher performance but very computationally expensive. Hence, I chose Random forest as the final model. Generally speaking, all the models here didn't performaned very well on neutral sentiment, but Random forest still achieved a 60% accuracy rate. 
 
