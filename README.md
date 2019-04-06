@@ -51,6 +51,7 @@
 ## Modeling for sentiment analysis of drug reviews
 - The 215,063 patients' comments were provided together with rating ranging from 0 to 10. Here, I assigned the rating into three categories “Positive” (<= 4), “Negative” (>=7), and “Neutral” (>4 and <7) in order to avoild bias from personal influence. The words in comments were cleaned, stemmized and vectorized using tf-idf. 
 - The dataset was then trained using Logistic regresssion, SVM, Random forest and Gradient boosting as well as embeding plus LSTM. The resulting confusion matrixes were listed below.
+- The dataset is huge and modeling could be computationally expensive. So Amazon Web Services (AWS) was appied to achieve a more efficient processing (m5.4xlarge).
 
    |model|Random forest|LSTM|Logistic regresssion|SVM linear kernel|Gradient boosting|Baseline(choose the most frequent class)|
    |---|---|---|---|---|---|---|
