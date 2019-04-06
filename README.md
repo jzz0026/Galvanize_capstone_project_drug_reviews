@@ -56,9 +56,11 @@
    <img src="Plot/Confusion_matrix_sentiment.png" alt="alternate text">
 </p>
 
-Intresetingly, Random forest gave a better accuracy (0.88) to all other algorithms, even LSTM. Despite LSTM is capable of remembering information for long periods of time, but it seems to be not neccassary here. The indpendant words probably contained enough imformation for a good classifier. However, if keeping do more tuning for LSTM, it's still very likely to get a model with higher performance.
+Intresetingly, Random forest gave a the highest accuracy (0.88) comparing to all other algorithms, even LSTM. Even more impressive, it gave a 99% accuracy rate on positive sentiment. Generally speaking, all the models here didn't performaned very well on neutral sentiment, but Random forest still achieved a 60% accuracy rate. ?? Despite LSTM is capable of remembering information for long periods of time, but it seems to be not neccassary here. The indpendant words probably contained enough imformation for a good classifier. However, if keeping do more tuning for LSTM, it's still very likely to get a model with higher performance but very computationally expensive. Hence, I chose Random forest as the final model.
 
-- wordcloud
+- 
+Random forest feature importance 
+wordcloud
 
 ## Modeling for identification of comments with side effects
 - It will also be very suggestive to drug pharmacy companies if I can build a model to filtering comments and quickly selecting patients' complains about side effects. However, the dataset used above didn't really contained the label of "with/without side effects". So web scraping is applied to extract comments and this type of labe from druglib.com, leading to total 4160 records. 
