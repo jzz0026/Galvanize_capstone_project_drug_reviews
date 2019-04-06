@@ -47,9 +47,14 @@
 <p align="center">
    <img src="Plot/Top_condition_signif_month.png" alt="alternate text">
 </p>
-## Modeling for sentiment analysis of drug reviews
-- The 215,063 patients' comments were provided together with rating ranging from 0 to 10. Here, I assigned the rating into three categories “Positive” (<= 4), “Negative” (>=7), and “Neutral” (>4 and <7) in order to avoild bias from personal influence. The words in comments were vectorized using tf-idf. 
 
+## Modeling for sentiment analysis of drug reviews
+- The 215,063 patients' comments were provided together with rating ranging from 0 to 10. Here, I assigned the rating into three categories “Positive” (<= 4), “Negative” (>=7), and “Neutral” (>4 and <7) in order to avoild bias from personal influence. The words in comments were cleaned, stemmized and vectorized using tf-idf. 
+- The dataset was then trained using Logistic regresssion, SVM, Random forest and Gradient boosting as well as embeding plus LSTM. The resulting confusion matrixes were listed below.
+
+<p align="center">
+   <img src="Plot/Confusion_matrix_sentiment.png" alt="alternate text">
+</p>
 
 
 ## Modeling for identification of comments with side effects
