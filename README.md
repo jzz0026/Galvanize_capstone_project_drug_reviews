@@ -56,7 +56,13 @@
    <img src="Plot/Confusion_matrix_sentiment.png" alt="alternate text">
 </p>
 
-Intresetingly, Random forest gave a the highest accuracy (0.88) comparing to all other algorithms, even LSTM. Even more impressive, it gave a 99% accuracy rate on positive sentiment. Generally speaking, all the models here didn't performaned very well on neutral sentiment, but Random forest still achieved a 60% accuracy rate. ?? Despite LSTM is capable of remembering information for long periods of time, but it seems to be not neccassary here. The indpendant words probably contained enough imformation for a good classifier. However, if keeping do more tuning for LSTM, it's still very likely to get a model with higher performance but very computationally expensive. Hence, I chose Random forest as the final model.
+   |model|Random forest|LSTM|Logistic regresssion|SVM linear kernel|Gradient boosting|Base line|
+   |---|---|---|---|---|---|---|
+   |accuracy|0.88|0.83|0.78|0.78|0.74|-|
+   
+
+   
+Intresetingly, Random forest gave a the highest accuracy (0.88) comparing to all other algorithms, even LSTM. Even more impressive, it gave a 99% accuracy rate on positive sentiment. LSTM is capable of remembering information for long periods of time, but it only achieved a higher accuracy rate on positive sentiment rather than rest of two. The indpendant words probably contained enough imformation for a good classifier. However, if keeping do more tuning for LSTM, it's still very likely to get a model with higher performance but very computationally expensive. Hence, I chose Random forest as the final model. Generally speaking, all the models here didn't performaned very well on neutral sentiment, but Random forest still achieved a 60% accuracy rate. 
 
 - 
 Random forest feature importance 
