@@ -56,6 +56,9 @@
    <img src="Plot/Confusion_matrix_sentiment.png" alt="alternate text">
 </p>
 
+Intresetingly, Random forest gave a better accuracy (0.88) to all other algorithms, even LSTM. Despite LSTM is capable of remembering information for long periods of time, but it seems to be not neccassary here. The indpendant words probably contained enough imformation for a good classifier. However, if keeping do more tuning for LSTM, it's still very likely to get a model with higher performance.
+
+- wordcloud
 
 ## Modeling for identification of comments with side effects
 - It will also be very suggestive to drug pharmacy companies if I can build a model to filtering comments and quickly selecting patients' complains about side effects. However, the dataset used above didn't really contained the label of "with/without side effects". So web scraping is applied to extract comments and this type of labe from druglib.com, leading to total 4160 records. 
