@@ -78,7 +78,6 @@ Intresetingly, Random forest gave a the highest accuracy (0.88) comparing to all
 <p align="center">
    <img src="Plot/pos_senti_lr_wordcloud.png" alt="alternate text" > 
 </p> 
-
 <p align="center">
    <img src="Plot/Neg_senti_lr_wordcloud.png" alt="alternate text">
 </p>
