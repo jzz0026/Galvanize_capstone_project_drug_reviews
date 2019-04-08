@@ -9,7 +9,7 @@
 - Train the model to predict sentiment of reviews as "Positive", "Negative", and "Neutral" based on vectorized words from patients’ comments.
 - Explore side effects from patients’ comments.
 
-## EDA
+## Exploratory data analysis
 - The number of comments posted had a trend of increasing with time seires. The website probably became more popular after 2015. 
 <p align="center">
    <img src="Plot/num_comments_date.png" alt="alternate text">
@@ -76,14 +76,10 @@ Intresetingly, Random forest gave a the highest accuracy (0.88) comparing to all
 
 - However, the permutation importance above didn't really seperate contributions of words for sentiments of “Positive”, “Negative” and “Neutral”, respectively. So I also put the figures of wordcloud showing coefficients of the logistic regression model, which might give us some ideas about which words could be good indicators for both "Positive" and "Negative".
 
-Positive
-<p align="center">
-   <img src="Plot/pos_senti_lr_wordcloud.png" alt="alternate text" > 
+<p align="left">
+   <img src="Plot/pos_senti_lr_wordcloud.png" alt="alternate text" width="425"> <img src="Plot/Neg_senti_lr_wordcloud.png" alt="alternate text" width="425">
 </p> 
-Negative
-<p align="center">
-   <img src="Plot/Neg_senti_lr_wordcloud.png" alt="alternate text">
-</p>
+
 
 ## Modeling for identification of comments with side effects
 - It will also be very suggestive to drug pharmacy companies if I can build a model to filtering comments and quickly selecting patients' complains about side effects. However, the dataset used above didn't really contained the label of "with/without side effects". So web scraping is applied to extract comments and this type of labe from druglib.com, leading to total 4160 records. 
