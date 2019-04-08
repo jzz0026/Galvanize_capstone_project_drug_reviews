@@ -27,9 +27,11 @@
    <img src="http://colah.github.io/posts/2015-08-Understanding-LSTMs/img/RNN-unrolled.png" alt="alternate text" width="800">
 </p>
 
+<div align="center">
+  An unrolled recurrent neural network
+</div>
 <p align="center">
-   <img src="https://wiki.tum.de/download/attachments/22578349/LSTMdiff.jpg?version=1&modificationDate=1486080694247&api=v2
-" alt="alternate text" width="800">
+   <img src="https://wiki.tum.de/download/attachments/22578349/LSTMdiff.jpg?version=1&modificationDate=1486080694247&api=v2" alt="alternate text" width="800">
 </p>
 
 ## Exploratory data analysis
