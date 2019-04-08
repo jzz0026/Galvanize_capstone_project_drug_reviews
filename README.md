@@ -15,8 +15,8 @@
       3. Random forest 
       4. Gradient boosting
       5. LSTM
-- **What's LSTM?**
-  Long short-term memory (LSTM) is an artificial recurrent neural network (RNN) architecture (XX et al) used in the field of deep         learning. A common LSTM unit is composed of a cell, an **input gate**, an **output gate** and a **forget gate**. The cell remembers     values over arbitrary time intervals and the three gates regulate the flow of information into and out of the cell. Comparing to         classical RNN, LSTM is capable of handling "long-term dependencies" **VERY WELL**.
+- **What's LSTM?**<br/>
+  Long short-term memory (LSTM) is an artificial recurrent neural network (RNN) architecture (XX et al) used in the field of deep         learning, which is able to remembering information for long periods of time. In Natural language processing (NLP), documents are fed     into the model of LSTM one word by one word and the model will make the prediction with consideration of **word sequence**. A common     LSTM unit is composed of a cell, an **input gate**, an **output gate** and a **forget gate**. The cell remembers values over arbitrary   time intervals and the three gates regulate the flow of information into and out of the cell. Comparing to classical RNN, LSTM is       capable of handling "long-term dependencies" **VERY WELL**.
   
 
 <div align="center">
