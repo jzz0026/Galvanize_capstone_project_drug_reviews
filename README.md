@@ -42,7 +42,13 @@
 
 - **Word Embedding**
   In order to use LSTM, an adddional layer of word embedding has to be added, which is a language modeling technique used for **mapping   words to vectors of real numbers**. Typically, a word embedding model (e.g. CBOW) predicts **the current word given context words**     within **specific window**. The input layer contains the context words and the output layer contains the current word. The hidden       layer contains the number of dimensions in which we want to represent current word present at the output layer.
-  
+
+<div align="center">
+  An illustration of a word embeding layer
+</div>
+<p align="center">
+   <img src="http://praelexis.com/wp-content/uploads/2017/05/WordEmbeddings.png" alt="alternate text" width="800">
+</p>
   
 ## Exploratory data analysis
 - The number of comments posted had a trend of increasing with time seires. The website probably became more popular after 2015. 
