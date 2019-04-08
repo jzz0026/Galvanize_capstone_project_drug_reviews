@@ -20,7 +20,7 @@
   
 
 <div align="center">
-  my text here.
+  **An unrolled recurrent neural network**
 </div>
 
 <p align="center">
