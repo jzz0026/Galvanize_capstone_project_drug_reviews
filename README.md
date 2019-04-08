@@ -10,11 +10,12 @@
 - Explore side effects from patients’ comments.
 
 ## Learning methods for classification
-1. Logistic regresssion
-2. SVM 
-3. Random forest 
-4. Gradient boosting
-5. LSTM
+   1. Logistic regresssion
+   2. SVM 
+   3. Random forest 
+   4. Gradient boosting
+   5. LSTM
+      - What's LSTM? 
 
 ## Exploratory data analysis
 - The number of comments posted had a trend of increasing with time seires. The website probably became more popular after 2015. 
