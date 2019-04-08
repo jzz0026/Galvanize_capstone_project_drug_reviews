@@ -9,6 +9,13 @@
 - Train the model to predict sentiment of reviews as "Positive", "Negative", and "Neutral" based on vectorized words from patients’ comments.
 - Explore side effects from patients’ comments.
 
+## Learning methods for classification
+- Logistic regresssion
+- SVM 
+- Random forest 
+- Gradient boosting
+- LSTM
+
 ## Exploratory data analysis
 - The number of comments posted had a trend of increasing with time seires. The website probably became more popular after 2015. 
 <p align="center">
