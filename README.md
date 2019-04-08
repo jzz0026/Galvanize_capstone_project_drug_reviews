@@ -23,9 +23,13 @@
   An unrolled recurrent neural network
 </div>
 
+<br/>
+
 <p align="center">
    <img src="http://colah.github.io/posts/2015-08-Understanding-LSTMs/img/RNN-unrolled.png" alt="alternate text" width="800">
 </p>
+
+<br/>
 
 <br/>
 
