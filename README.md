@@ -20,7 +20,7 @@
   
 
 <div align="center">
-  **An unrolled recurrent neural network**
+  An unrolled recurrent neural network
 </div>
 
 <p align="center">
