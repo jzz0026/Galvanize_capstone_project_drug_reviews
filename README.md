@@ -77,7 +77,7 @@ Intresetingly, Random forest gave a the highest accuracy (0.88) comparing to all
 - However, the permutation importance above didn't really seperate contributions of words for sentiments of “Positive”, “Negative” and “Neutral”, respectively. So I also put the figures of wordcloud showing coefficients of the logistic regression model, which might give us some ideas about which words could be good indicators for both "Positive" and "Negative".
 
 <p align="left">
-   <img src="Plot/pos_senti_lr_wordcloud.png" alt="alternate text" width="500"> <img src="Plot/Neg_senti_lr_wordcloud.png" alt="alternate text" width="500">
+   <img src="Plot/pos_senti_lr_wordcloud.png" alt="alternate text" width="425"> <img src="Plot/Neg_senti_lr_wordcloud.png" alt="alternate text" width="425">
 </p> 
 
 
