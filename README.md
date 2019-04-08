@@ -41,7 +41,7 @@
 </p>
 
 - **Word Embedding**
-  In order to use LSTM, an adddional layer of word embedding has to be added, which is a language modeling technique used for **mapping   words to vectors of real numbers**. Typically, a word embedding model (e.g. CBOW) predicts **the current word given context words**     within **specific window**. The input layer contains the context words and the output layer contains the current word. The hidden       layer contains the number of dimensions in which we want to represent current word present at the output layer.
+  In order to use LSTM, an adddional layer of word embedding has to be added, which is a language modeling technique used for **mapping   words to vectors of real numbers**. Typically, a word embedding model (e.g. CBOW) predicts **the current word given context words**     within **specific window**. The input layer contains the context words and the output layer contains the current word. The hidden       layer contains the number of dimensions in which we want to represent current word present at the output layer. The weight matrix       labeled in green as the figure below are what we are interested, representing vectors in the semantic space. Using these generated       vectors could greatly boost the performance of LSTM
 
 <div align="center">
   An illustration of a word embeding layer
