@@ -40,6 +40,10 @@
    <img src="https://wiki.tum.de/download/attachments/22578349/LSTMdiff.jpg?version=1&modificationDate=1486080694247&api=v2" alt="alternate text" width="800">
 </p>
 
+- **Word Embedding**
+  In order to use LSTM, an adddional layer of word embedding has to be added, which is a language modeling technique used for **mapping   words to vectors of real numbers**. Typically, a word embedding model (e.g. CBOW) predicts **the current word given context words**     within **specific window**. The input layer contains the context words and the output layer contains the current word. The hidden       layer contains the number of dimensions in which we want to represent current word present at the output layer.
+  
+  
 ## Exploratory data analysis
 - The number of comments posted had a trend of increasing with time seires. The website probably became more popular after 2015. 
 <p align="center">
