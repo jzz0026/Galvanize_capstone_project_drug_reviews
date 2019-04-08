@@ -6,7 +6,7 @@
 
 ## Target
 - Find diseases with significantly seasonal variations based on dates of posting comments.  
-- Train the model to predict sentiment of reviews as “Positive”, “Negative”, and “Neutral” based on vectorized words from patients’ comments.
+- Train the model to predict sentiment of reviews as "Positive", "Negative", and "Neutral" based on vectorized words from patients’ comments.
 - Explore side effects from patients’ comments.
 
 ## EDA
@@ -49,7 +49,7 @@
 </p>
 
 ## Modeling for sentiment analysis of drug reviews
-- The 215,063 patients' comments were provided together with rating ranging from 0 to 10. Here, I assigned the rating into three categories “Positive” (<= 4), “Negative” (>=7), and “Neutral” (>4 and <7) in order to avoild bias from personal influence. The words in comments were cleaned, stemmized and vectorized using tf-idf. 
+- The 215,063 patients' comments were provided together with rating ranging from 0 to 10. Here, I assigned the rating into three categories "Positive" (<= 4), "Negative" (>=7), and "Neutral" (>4 and <7) in order to avoild bias from personal influence. The words in comments were cleaned, stemmized and vectorized using tf-idf. 
 - The dataset was then trained using Logistic regresssion, SVM, Random forest and Gradient boosting as well as embeding plus LSTM. The resulting confusion matrixes were listed below.
 - The dataset is huge and modeling could be computationally expensive. So Amazon Web Services (AWS) was appied to achieve a more efficient processing (m5.4xlarge).
 
@@ -73,7 +73,7 @@ Intresetingly, Random forest gave a the highest accuracy (0.88) comparing to all
 
 <br/>
 
-- However, the permutation importance above didn't really seperate contributions of words for sentiments of “Positive”, “Negative” and “Neutral”, respectively. So I also put the figures of wordcloud showing coefficients of the logistic regression model, which might give us some ideas about which words could be good indicators for both “Positive” and “Negative”.
+- However, the permutation importance above didn't really seperate contributions of words for sentiments of “Positive”, “Negative” and “Neutral”, respectively. So I also put the figures of wordcloud showing coefficients of the logistic regression model, which might give us some ideas about which words could be good indicators for both "Positive" and "Negative".
 
 Positive
 <p align="center">
