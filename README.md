@@ -14,6 +14,9 @@
 <p align="center">
    <img src="Plot/num_comments_date.png" alt="alternate text">
 </p>
+
+<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plot.ly/~superjohnlove/4.embed"></iframe>
+
 - The number of comments for each condition/disease was unbalanced. We had a extremely high number of comments for birth control.
 <p align="center">
    <img src="Plot/num_comments_each_condition.png" alt="alternate text">
