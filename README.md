@@ -19,7 +19,7 @@
   Long short-term memory (LSTM) is an artificial recurrent neural network (RNN) architecture (XX et al) used in the field of deep         learning. A common LSTM unit is composed of a cell, an **input gate**, an **output gate** and a **forget gate**. The cell remembers     values over arbitrary time intervals and the three gates regulate the flow of information into and out of the cell. Comparing to         classical RNN, LSTM is capable of handling "long-term dependencies" **VERY WELL**.
   
 <p align="center">
-   <img src="http://colah.github.io/posts/2015-08-Understanding-LSTMs/img/RNN-unrolled.png" alt="alternate text">
+   <img src="http://colah.github.io/posts/2015-08-Understanding-LSTMs/img/RNN-unrolled.png" alt="alternate text" width="1000">
 </p>
 
 ## Exploratory data analysis
