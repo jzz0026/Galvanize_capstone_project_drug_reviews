@@ -1,7 +1,7 @@
-# Sentiment and Side effect Analysis of prescriptional drug reviews
+# Sentiment and Side effect Analysis of prescription drug reviews
 ## Motivation
-- This is the first business project hold by Good Grug Medical, a startup data analysis company.  The dataset used in this project provides patient reviews on specific drugs along with related conditions and a 10 star patient rating reflecting overall patient satisfaction. The data was obtained by crawling online pharmaceutical review sites  (Druglib.com). 
-- Sentiment Analysis of these reviews could be useful for pharmacy companies and doctors to quickly get into bad reviews and know patients' complains. Also, a lot of symptoms and drug sides were hiden under reviews, which will be great to be automatically extracted to improve the drug and help to give a better prescription. 
+- This is the first business project hold by Good drug Medical, a startup data analysis company.  The dataset used in this project provides patient reviews on specific drugs along with related conditions and a 10 star patient rating reflecting overall patient satisfaction. The data was obtained by crawling online pharmaceutical review sites  (Druglib.com). 
+- Sentiment Analysis of these reviews could be useful for pharmacy companies and doctors to quickly get into bad reviews and know patients' complains. Also, a lot of symptoms and drug sides were hidden under reviews, which will be great to be automatically extracted to improve the drug and help to give a better prescription. 
 - We try to utilize this dataset to do data mining for patient behavior and drug effectiveness in order to provide useful information to patients, doctors and pharmacy companies.
 
 ## Target
@@ -10,7 +10,7 @@
 - Explore side effects from patients’ comments.
 
 ## Learning methods for classification
-      1. Logistic regresssion
+      1. Logistic regression
       2. SVM 
       3. Random forest 
       4. Gradient boosting
@@ -41,17 +41,17 @@
 </p>
 
 - **Word Embedding**
-  In order to use LSTM, an adddional layer of word embedding has to be added, which is a language modeling technique used for **mapping   words to vectors of real numbers**. Typically, a word embedding model (e.g. CBOW) predicts **the current word given context words**     within **specific window**. The input layer contains the context words and the output layer contains the current word. The hidden       layer contains the number of dimensions in which we want to represent current word present at the output layer. The weight matrix       labeled in green as the figure below are what we are interested, representing vectors in the semantic space. Using these generated       vectors could greatly boost the performance of LSTM
+  In order to use LSTM, an additional layer of word embedding has to be added, which is a language modeling technique used for **mapping   words to vectors of real numbers**. Typically, a word embedding model (e.g. CBOW) predicts **the current word given context words**     within **specific window**. The input layer contains the context words and the output layer contains the current word. The hidden       layer contains the number of dimensions in which we want to represent current word present at the output layer. The weight matrix       labeled in green as the figure below are what we are interested, representing vectors in the semantic space. Using these generated       vectors could greatly boost the performance of LSTM
 
 <div align="center">
-  An illustration of a word embeding layer
+  An illustration of a word embedding layer
 </div>
 <p align="center">
    <img src="http://praelexis.com/wp-content/uploads/2017/05/WordEmbeddings.png" alt="alternate text" width="800">
 </p>
   
 ## Exploratory data analysis
-- The number of comments posted had a trend of increasing with time seires. The website probably became more popular after 2015. 
+- The number of comments posted had a trend of increasing with time series. The website probably became more popular after 2015. 
 <p align="center">
    <img src="Plot/num_comments_date.png" alt="alternate text">
 </p>
@@ -62,7 +62,7 @@
 </p>
 
 ### Find conditions/diseases with significantly seasonal variations
-- The figour below showed the percentage of comments for the top 50 conditions with the most comments among 12 months. Several of them obviously presented some preference on distinct months, such as weight Loss and cough.	
+- The figure below showed the percentage of comments for the top 50 conditions with the most comments among 12 months. Several of them obviously presented some preference on distinct months, such as weight Loss and cough.	
 <p align="center">
    <img src="Plot/Per_comments_month.png" alt="alternate text">
 </p>
