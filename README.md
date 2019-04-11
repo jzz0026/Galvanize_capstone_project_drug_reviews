@@ -140,7 +140,7 @@ Intresetingly, Random forest gave a the highest accuracy (0.88) comparing to all
 <p align="center">
    <img src="Plot/top_features_lin_svm.png" alt="alternate text" width="1500"> 
 </p>
-Top words in the linear SVM appeared to be related to description of some discomfort (e.g. "nausea", "dry", "diarrhea", "heartburn") dizzi"). However, these words could be ambiguous and included both symptoms and side effects, probably disturbing classification and resulting in a relatively lower performance. LSTM, as a special kind of RNN, is able to maintain some "memories" for forward/backworad words and likely to better "understand" the whole sentence. 
+Top words in the linear SVM appeared to be related to description of some discomfort (e.g. "nausea", "dry", "diarrhea", "heartburn" and  dizzi"). However, these words could be ambiguous and included both symptoms and side effects, probably disturbing classification and resulting in a relatively lower performance. LSTM, as a special kind of RNN, is able to maintain some "memories" for forward/backworad words and likely to better "understand" the whole sentence. 
 <br />
 
 - Comments of benefits, side effects and others were separated in this data set, which could be distinct to usual comments online. Despite three types of comments were incorporated for training, I still believe it should be neccesary to use the models to predit the other dataset with no label of side effects (used in the last section) in order to test the models in the real world. 
